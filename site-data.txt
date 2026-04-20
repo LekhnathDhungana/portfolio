@@ -1,0 +1,78 @@
+# Portfolio site reference — Bebas Dhungana
+# Editable site copy lives in JSON under data/ (loaded by js/main.js):
+#   data/about.json      — intro / “about me” (greet, name, roles[], paragraph segment arrays, CTA). Long-form voice. On load, intro → experience → projects each animate in as one block (ease down from above); see css/styles.css + js/main.js.
+#   data/experience.json — experience heading, intro line with resume link, positions[]
+#   data/projects.json   — projects heading, sub line, items[]
+# Serve the site over HTTP (e.g. python3 -m http.server) so fetch() can read those files.
+# Resume: intro CTA + experience blurb link open Bebas_Dhungana_Resume.pdf in a new tab (set newTab: true on links in data/about.json and data/experience.json). No separate resume section.
+#
+# Optional photo: replace the .avatar block in index.html with <img src="images/profile.jpg" alt="Bebas Dhungana" class="avatar-img" /> and add matching CSS.
+
+## Positioning (management / finance)
+TAGLINE=B.A. Economics · strategy, finance & operations
+SUMMARY_ONE_LINE=Economics student focused on financial analysis, budgeting, stakeholder reporting, and leading teams from strategy through execution.
+
+## Contact
+FULL_NAME=Bebas Dhungana
+EMAIL=bebaslekhnath@gmail.com
+PHONE=701-740-5005
+LOCATION=New York City, New York
+LINKEDIN_URL=https://www.linkedin.com/in/bebasdhungana/
+GITHUB_URL=https://github.com/bebasdhungana
+# If GitHub username differs, replace GITHUB_URL above and the href in index.html.
+
+## Education
+SCHOOL=University of Minnesota, Twin Cities
+DEGREE=Bachelor of Arts, Economics
+EDU_DATES=Sep 2023 — May 2026 (expected)
+HONORS=Critical Language Scholarship (Hindi), Young Envoys Scholarship
+
+## Experience (chronological for site; align bullets with resume)
+
+### Sharecast Initiative — Strategy & Insights Analyst Intern
+LOCATION=Minneapolis, MN
+DATES=Jun 2025 — Aug 2025
+BULLET_1=Analyzed survey data from 10,000+ respondents in R; surfaced demographic and behavioral trends for national public-opinion reports and executive-ready narratives.
+BULLET_2=Designed and deployed 3 interactive Power BI dashboards and 10+ visual reports; improved accessibility of insights and reduced analysis time about 30%.
+BULLET_3=Cleaned and validated 1,200+ survey responses with R scripts; raised dataset integrity for reliable performance and client reporting.
+
+### Eternal Dharma Inc. (satyam.app) — Founder & CEO
+LOCATION=Minneapolis, MN
+DATES=Jan 2025 — May 2026
+BULLET_1=Founded and scaled cross-platform product; exited via acquisition — validating positioning, capital efficiency, and go-to-market execution.
+BULLET_2=Raised $10,000 pre-seed from angel investors; owned budgeting, roadmap alignment, and resource allocation across a 10-person cross-functional team.
+BULLET_3=Launched to early adopters with initial revenue; integrated AI capabilities to support retention and growth strategy.
+
+### SEVA (sevatheworld.org) — President
+LOCATION=Minneapolis, MN
+DATES=Sep 2023 — Present
+BULLET_1=Secured $30,000+ through grants, donor outreach, and fundraising; obtained 501(c)(3) status to expand long-term funding and compliance posture.
+BULLET_2=Built partnerships with international research institutes; led 50+ members through strategic planning, cost reduction initiatives (targeting ~96% water-system cost reduction), and operations.
+BULLET_3=Presented water purification research at an international science conference; engaged global researchers and practitioners.
+
+### African Student Union — Treasurer
+DATES=Sep 2022 — May 2023
+BULLET_1=Managed a $15,000+ budget with transparent controls and reporting for large-scale campus programming (2,000+ attendees).
+BULLET_2=Led legal and financial workstreams toward 501(c)(3) nonprofit status to unlock additional funding streams.
+
+### Lions Club — Vice President
+DATES=Sep 2022 — May 2023
+BULLET_1=Coordinated volunteer programs and community events; grew attendance through partnerships and outreach (~70% YoY).
+BULLET_2=Led fundraising efforts that increased donations about 35% to support local shelters.
+
+## Projects (highlights — analytical, financial, and leadership outcomes)
+
+### Project 1 — National insights & BI reporting (Sharecast)
+SUMMARY=Large-scale survey analytics in R paired with Power BI delivery for recurring national reports and faster leadership review cycles.
+TAGS=R · Power BI · Survey analytics · Reporting
+
+### Project 2 — Venture build, capital, and exit (Eternal Dharma / Satyam)
+SUMMARY=End-to-end venture leadership: fundraising, team management, product launch, revenue with early adopters, and acquisition exit.
+TAGS=Fundraising · M&A exit · Operations · Product strategy
+
+### Project 3 — Nonprofit financial & compliance infrastructure (African Student Union)
+SUMMARY=Five-figure budget stewardship, event economics at scale, and nonprofit formation workstreams to support sustainable funding.
+TAGS=Budgeting · Compliance · Events · Nonprofit
+
+## Resume file
+RESUME_FILE=Bebas_Dhungana_Resume.pdf

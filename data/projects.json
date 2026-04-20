@@ -1,0 +1,30 @@
+{
+  "heading": "Projects",
+  "sub": "Tracking my learning and growth through product building and focused community work.",
+  "items": [
+    {
+      "tag": "App",
+      "title": "Satyam",
+      "summary": "An all-in-one spiritual app that brings together core daily practices, content, and tools in one unified experience.",
+      "href": "https://satyam.app/",
+      "coverLabel": "Satyam",
+      "coverGradient": "linear-gradient(135deg, #d8b59e 0%, #c39575 100%)"
+    },
+    {
+      "tag": "Feature",
+      "title": "Sanskritam",
+      "summary": "A feature-rich language learning course designed to make Sanskrit accessible through structured lessons, guided practice, and progressive skill-building.",
+      "href": "https://satyam.app/features/sanskritam",
+      "coverLabel": "Sanskritam",
+      "coverGradient": "linear-gradient(135deg, #f2e9d8 0%, #d5c3a4 100%)"
+    },
+    {
+      "tag": "Feature",
+      "title": "Samaj",
+      "summary": "A social network feature set built to connect people through shared interests, conversation, and community-driven engagement.",
+      "href": "https://satyam.app/features/samaj",
+      "coverLabel": "Samaj",
+      "coverGradient": "linear-gradient(135deg, #1f2937 0%, #111827 100%)"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "experienceView": {
+    "heading": "Experience",
+    "cta": {
+      "label": "View resume →",
+      "href": "Bebas_Dhungana_Resume.pdf",
+      "newTab": true
+    },
+    "groups": [
+      {
+        "heading": "Education",
+        "items": [
+          {
+            "icon": "education",
+            "title": "Economics, University of Minnesota",
+            "meta": "Critical Language Scholarship (Hindi) · Young Envoys Scholar",
+            "aside": "UMN",
+            "asideImage": "UMNLOGO.png",
+            "asideAlt": "University of Minnesota logo"
+          }
+        ]
+      },
+      {
+        "heading": "Entrepreneurship",
+        "items": [
+          {
+            "icon": "briefcase",
+            "title": "Founder & CEO",
+            "meta": "Eternal Dharma Inc. (satyam.app) · Jan 2025 — May 2026"
+          }
+        ]
+      },
+      {
+        "heading": "Strategy & insights",
+        "items": [
+          {
+            "icon": "chart",
+            "title": "Strategy & Insights Analyst Intern",
+            "meta": "Sharecast Initiative · Jun 2025 — Aug 2025"
+          }
+        ]
+      },
+      {
+        "heading": "Nonprofit leadership",
+        "items": [
+          {
+            "icon": "heart",
+            "title": "President",
+            "meta": "SEVA (sevatheworld.org) · Sep 2023 — Present"
+          }
+        ]
+      },
+      {
+        "heading": "Campus leadership",
+        "items": [
+          {
+            "icon": "users",
+            "title": "Treasurer",
+            "meta": "African Student Union · Sep 2022 — May 2023"
+          },
+          {
+            "icon": "users",
+            "title": "Vice President",
+            "meta": "Lions Club · Sep 2022 — May 2023"
+          }
+        ]
+      }
+    ]
+  }
+}

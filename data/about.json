@@ -1,0 +1,109 @@
+{
+  "greet": "Hey, I'm",
+  "name": "Bebas",
+  "roles": [
+    "Finance & Strategy",
+    "Content Creator",
+    "Community Builder"
+  ],
+  "paragraphs": [
+    [
+      { "text": "I live in " },
+      { "strong": "New York City" },
+      {
+        "text": " and I'm on a mission to learn as many high-leverage things as I can. I'm an economics student at the "
+      },
+      {
+        "link": {
+          "text": "University of Minnesota",
+          "href": "https://umn.edu"
+        }
+      },
+      {
+        "text": " ("
+      },
+      { "strong": "Critical Language Scholarship" },
+      { "text": " in Hindi, " },
+      { "strong": "Young Envoys Scholar" },
+      { "text": ")." }
+    ],
+    [
+      {
+        "text": "I founded "
+      },
+      { "strong": "Satyam" },
+      {
+        "text": " ("
+      },
+      {
+        "link": {
+          "text": "satyam.app",
+          "href": "https://satyam.app"
+        }
+      },
+      {
+        "text": ") through Eternal Dharma—raised pre-seed, ran a ten-person team, shipped to early revenue, and "
+      },
+      { "strong": "exited via acquisition" },
+      {
+        "text": ". Alongside the product we grew the brand to nearly "
+      },
+      { "strong": "5,000 followers" },
+      { "text": " and about " },
+      { "strong": "1 million views" },
+      {
+        "text": "; I treat that as part build, part storytelling. I still lean on "
+      },
+      { "strong": "data analysis" },
+      {
+        "text": "—R, validation, stakeholder-ready dashboards—from national-scale survey work."
+      }
+    ],
+    [
+      { "text": "I care most about " },
+      { "strong": "community that lasts" },
+      {
+        "text": ". I'm president of "
+      },
+      {
+        "link": {
+          "text": "SEVA",
+          "href": "https://sevatheworld.org"
+        }
+      },
+      {
+        "text": ", a "
+      },
+      { "strong": "501(c)(3)" },
+      {
+        "text": " building lower-cost clean water—"
+      },
+      { "strong": "$30,000+" },
+      {
+        "text": " in grants and fundraising, international research partners, and a conference stage for our device. I've also run large student-program budgets and volunteer ops at scale."
+      }
+    ],
+    [
+      { "text": "If I can be helpful—" },
+      { "strong": "strategy" },
+      { "text": ", " },
+      { "strong": "ops" },
+      { "text": ", " },
+      { "strong": "nonprofit finance" },
+      {
+        "text": ", or just comparing notes—please reach out! "
+      },
+      {
+        "link": {
+          "text": "bebaslekhnath@gmail.com",
+          "href": "mailto:bebaslekhnath@gmail.com"
+        }
+      }
+    ]
+  ],
+  "cta": {
+    "label": "View resume →",
+    "href": "Bebas_Dhungana_Resume.pdf",
+    "newTab": true
+  }
+}

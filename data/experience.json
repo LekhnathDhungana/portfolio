@@ -1,0 +1,67 @@
+{
+  "heading": "Experience",
+  "subSegments": [
+    {
+      "text": "Roles emphasizing financial discipline, analytics, and leadership. Full detail on the "
+    },
+    {
+      "link": {
+        "text": "resume",
+        "href": "Bebas_Dhungana_Resume.pdf",
+        "newTab": true
+      }
+    },
+    { "text": "." }
+  ],
+  "positions": [
+    {
+      "dates": "Jun 2025 — Aug 2025",
+      "title": "Strategy & Insights Analyst Intern",
+      "org": "Sharecast Initiative · Minneapolis, MN",
+      "bullets": [
+        "Analyzed survey data from 10,000+ respondents in R; surfaced demographic and behavioral trends for national public-opinion reports and executive-ready narratives.",
+        "Designed and deployed 3 interactive Power BI dashboards and 10+ visual reports; improved accessibility of insights and reduced analysis time about 30%.",
+        "Cleaned and validated 1,200+ survey responses with R scripts; raised dataset integrity for reliable performance and client reporting."
+      ]
+    },
+    {
+      "dates": "Jan 2025 — May 2026",
+      "title": "Founder & CEO",
+      "org": "Eternal Dharma Inc. (satyam.app) · Minneapolis, MN",
+      "bullets": [
+        "Founded and scaled a cross-platform product; exited via acquisition — validating positioning, capital efficiency, and go-to-market execution.",
+        "Raised $10,000 pre-seed from angel investors; owned budgeting, roadmap alignment, and resource allocation across a 10-person cross-functional team.",
+        "Grew Satyam (satyam.app) to nearly 5,000 followers and nearly 1 million views; built reach alongside product and community strategy.",
+        "Launched to early adopters with initial revenue; integrated AI capabilities to support retention and growth strategy."
+      ]
+    },
+    {
+      "dates": "Sep 2023 — Present",
+      "title": "President",
+      "org": "SEVA (sevatheworld.org) · Minneapolis, MN",
+      "bullets": [
+        "Secured $30,000+ through grants, donor outreach, and fundraising; obtained 501(c)(3) status to expand long-term funding and compliance posture.",
+        "Built partnerships with international research institutes; led 50+ members through strategic planning, cost reduction initiatives, and operations.",
+        "Presented water purification research at an international science conference; engaged global researchers and practitioners."
+      ]
+    },
+    {
+      "dates": "Sep 2022 — May 2023",
+      "title": "Treasurer",
+      "org": "African Student Union",
+      "bullets": [
+        "Managed a $15,000+ budget with transparent controls and reporting for large-scale campus programming (2,000+ attendees).",
+        "Led legal and financial workstreams toward 501(c)(3) nonprofit status to unlock additional funding streams."
+      ]
+    },
+    {
+      "dates": "Sep 2022 — May 2023",
+      "title": "Vice President",
+      "org": "Lions Club",
+      "bullets": [
+        "Coordinated volunteer programs and community events; grew attendance through partnerships and outreach (~70% YoY).",
+        "Led fundraising efforts that increased donations about 35% to support local shelters."
+      ]
+    }
+  ]
+}
