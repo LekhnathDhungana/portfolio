@@ -766,7 +766,7 @@
       applyRoute("projects", { replaceHash: false });
     } else {
       applyRoute("home", {
-        replaceHash: false,
+        replaceHash: true,
         smoothScrollIntro: false,
       });
     }
