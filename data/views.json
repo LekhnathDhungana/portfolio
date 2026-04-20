@@ -64,6 +64,41 @@
             "meta": "Lions Club · Sep 2022 — May 2023"
           }
         ]
+      },
+      {
+        "heading": "Languages",
+        "items": [
+          {
+            "icon": "education",
+            "title": "Native",
+            "meta": "English and Nepali"
+          },
+          {
+            "icon": "education",
+            "title": "Fluent",
+            "meta": "Hindi and Urdu"
+          },
+          {
+            "icon": "education",
+            "title": "Conversational",
+            "meta": "Chinese and French"
+          }
+        ]
+      },
+      {
+        "heading": "Awards",
+        "items": [
+          {
+            "icon": "education",
+            "title": "Critical Language Scholarship (CLS)",
+            "meta": "U.S. Department of State"
+          },
+          {
+            "icon": "education",
+            "title": "Young Envoys Scholar",
+            "meta": "United Nations Association"
+          }
+        ]
       }
     ]
   }

@@ -1076,6 +1076,91 @@ html[data-theme="dark"] .theme-toggle .theme-toggle-sun {
   margin-top: 0.4rem;
 }
 
+.contact-form {
+  display: grid;
+  gap: 0.95rem;
+  max-width: var(--content-max);
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-field label {
+  font-size: var(--text-ui);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: var(--text-body-sm);
+  line-height: 1.5;
+  padding: 0.7rem 0.8rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 8.5rem;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.contact-submit {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--btn-outline-border);
+  background: transparent;
+  color: var(--text);
+  font-size: var(--text-ui);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.contact-submit:hover {
+  border-color: var(--text);
+  background: var(--btn-outline-hover-bg);
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-status {
+  margin: 0;
+  min-height: 1.15rem;
+  font-size: var(--text-body-sm);
+  color: var(--faint);
+}
+
+.contact-status.is-success {
+  color: #1f8a5c;
+}
+
+.contact-status.is-error {
+  color: var(--accent);
+}
+
 /* Footer */
 .site-footer {
   margin-top: auto;

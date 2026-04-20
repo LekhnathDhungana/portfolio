@@ -181,6 +181,60 @@
     });
   }
 
+  function initContactForm() {
+    var form = document.getElementById("contact-form");
+    if (!form) return;
+    var status = document.getElementById("contact-status");
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var endpoint = (form.getAttribute("data-contact-endpoint") || "").trim();
+    if (!endpoint) return;
+
+    function setStatus(message, type) {
+      if (!status) return;
+      status.textContent = message || "";
+      status.classList.remove("is-success", "is-error");
+      if (type === "success") status.classList.add("is-success");
+      if (type === "error") status.classList.add("is-error");
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+      setStatus("Sending your message...", "");
+
+      var payload = new FormData(form);
+      fetch(endpoint, {
+        method: "POST",
+        body: payload,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Request failed");
+          return response.json();
+        })
+        .then(function () {
+          form.reset();
+          setStatus("Message sent. Thank you!", "success");
+        })
+        .catch(function () {
+          setStatus(
+            "Could not send right now. Please email me at bebaslekhnath@gmail.com.",
+            "error"
+          );
+        })
+        .finally(function () {
+          if (!submitBtn) return;
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send message";
+        });
+    });
+  }
+
   function safeHref(href) {
     if (!href || typeof href !== "string") return "#";
     if (/^#[\w-]+$/.test(href)) return href;
@@ -638,7 +692,10 @@
   }
 
   function fetchJson(path) {
-    return fetch(path, { credentials: "same-origin" }).then(function (r) {
+    return fetch(path, {
+      credentials: "same-origin",
+      cache: "no-store",
+    }).then(function (r) {
       if (!r.ok) throw new Error(r.status + " " + path);
       return r.json();
     });
@@ -1012,6 +1069,7 @@
     }
     initMainNavRouting();
     initEmailPopover();
+    initContactForm();
     syncRouteFromHash();
     initAutoHideHeaderOnScroll();
     initScrollSpyHome();
