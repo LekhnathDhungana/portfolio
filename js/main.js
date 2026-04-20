@@ -55,6 +55,132 @@
     });
   }
 
+  function copyTextToClipboard(value) {
+    if (!value) return Promise.reject(new Error("Missing value"));
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(value);
+    }
+    return new Promise(function (resolve, reject) {
+      try {
+        var temp = document.createElement("textarea");
+        temp.value = value;
+        temp.setAttribute("readonly", "");
+        temp.style.position = "absolute";
+        temp.style.left = "-9999px";
+        document.body.appendChild(temp);
+        temp.select();
+        var copied = document.execCommand("copy");
+        document.body.removeChild(temp);
+        if (!copied) {
+          reject(new Error("Copy failed"));
+          return;
+        }
+        resolve();
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  function initEmailPopover() {
+    var wrap = document.querySelector("[data-email-popover]");
+    if (!wrap) return;
+    var emailLink = wrap.querySelector("[data-email-link]");
+    var emailAction = wrap.querySelector("[data-email-action]");
+    var emailText = wrap.querySelector("[data-email-text]");
+    var copyBtn = wrap.querySelector("[data-email-copy]");
+    if (!emailLink || !copyBtn) return;
+
+    var href = emailLink.getAttribute("href") || "";
+    var email = href.replace(/^mailto:/i, "").trim();
+    if (!email) return;
+
+    if (emailText) {
+      emailText.textContent = email;
+    }
+    if (emailAction) {
+      emailAction.setAttribute("href", "mailto:" + email);
+    }
+
+    var closeTimer = null;
+    var isCoarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
+
+    function clearCloseTimer() {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+    }
+
+    function openPopover() {
+      clearCloseTimer();
+      wrap.classList.add("is-open");
+    }
+
+    function closePopover() {
+      clearCloseTimer();
+      wrap.classList.remove("is-open");
+    }
+
+    function scheduleClose(delayMs) {
+      clearCloseTimer();
+      closeTimer = window.setTimeout(function () {
+        wrap.classList.remove("is-open");
+        closeTimer = null;
+      }, delayMs);
+    }
+
+    wrap.addEventListener("mouseenter", openPopover);
+    wrap.addEventListener("mouseleave", function () {
+      scheduleClose(2000);
+    });
+    wrap.addEventListener("focusin", openPopover);
+    wrap.addEventListener("focusout", function () {
+      window.setTimeout(function () {
+        if (!wrap.contains(document.activeElement)) {
+          closePopover();
+        }
+      }, 0);
+    });
+
+    if (emailLink) {
+      emailLink.addEventListener("click", function (e) {
+        if (!isCoarsePointer.matches) return;
+        if (!wrap.classList.contains("is-open")) {
+          e.preventDefault();
+          openPopover();
+        }
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!wrap.contains(e.target)) {
+        closePopover();
+      }
+    });
+
+    var copyLabel = copyBtn.textContent;
+    copyBtn.addEventListener("click", function () {
+      copyTextToClipboard(email)
+        .then(function () {
+          openPopover();
+          copyBtn.textContent = "Copied";
+          copyBtn.classList.add("is-copied");
+          window.setTimeout(function () {
+            copyBtn.textContent = copyLabel;
+            copyBtn.classList.remove("is-copied");
+          }, 1200);
+        })
+        .catch(function () {
+          openPopover();
+          copyBtn.textContent = "Copy failed";
+          window.setTimeout(function () {
+            copyBtn.textContent = copyLabel;
+          }, 1400);
+        });
+    });
+  }
+
   function safeHref(href) {
     if (!href || typeof href !== "string") return "#";
     if (/^#[\w-]+$/.test(href)) return href;
@@ -885,6 +1011,7 @@
       renderExperience(experienceCache);
     }
     initMainNavRouting();
+    initEmailPopover();
     syncRouteFromHash();
     initAutoHideHeaderOnScroll();
     initScrollSpyHome();

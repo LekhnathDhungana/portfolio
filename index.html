@@ -68,12 +68,30 @@
 
           <div class="site-header-end">
             <ul class="site-social" aria-label="Profiles and email">
-              <li>
-                <a href="mailto:bebaslekhnath@gmail.com" class="social-btn" aria-label="Email">
+              <li class="email-menu" data-email-popover>
+                <a
+                  href="mailto:bebaslekhnath@gmail.com"
+                  class="social-btn"
+                  aria-label="Email"
+                  data-email-link
+                >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
                     <path d="M4 6h16v12H4V6zm0 0l8 6 8-6" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
+                <div class="email-popover" role="group" aria-label="Email options">
+                  <p class="email-popover-address" data-email-text>bebaslekhnath@gmail.com</p>
+                  <a
+                    href="mailto:bebaslekhnath@gmail.com"
+                    class="email-popover-action"
+                    data-email-action
+                  >
+                    Click to email
+                  </a>
+                  <button type="button" class="email-popover-copy" data-email-copy>
+                    Copy email
+                  </button>
+                </div>
               </li>
               <li>
                 <a
