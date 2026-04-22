@@ -69,17 +69,17 @@
         "heading": "Languages",
         "items": [
           {
-            "icon": "education",
+            "icon": "language",
             "title": "Native",
             "meta": "English and Nepali"
           },
           {
-            "icon": "education",
+            "icon": "language",
             "title": "Fluent",
             "meta": "Hindi and Urdu"
           },
           {
-            "icon": "education",
+            "icon": "language",
             "title": "Conversational",
             "meta": "Chinese and French"
           }
